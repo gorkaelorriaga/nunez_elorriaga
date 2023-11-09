@@ -5,6 +5,8 @@ class CheckErrors:
         self.measure_to = measure_to
         self.monedas = ["EURO", "DOLLAR"]
         self.longitud = ["KM", "HM", "DAM", "M", "DM", "CM", "MM"]
+        self.area = ["HA","KM2","HM2", "DAM2", "M2", "DM2", "CM2", "MM2"]
+        self.volumen = ["KM3","HM3", "DAM3", "M3", "DM3", "CM3", "MM3"]
         self.liquidos = ["KL", "HL", "DAL", "L", "DL", "CL", "ML"]
         self.medida = None
         self.check_is_number()
@@ -65,6 +67,60 @@ class MedidaLongitud(CheckErrors):
                 self.value_or_values[i] = self.value_or_values[i] * 10**(indice_medida2 - indice_medida1)
             else:
                 self.value_or_values[i] = self.value_or_values[i] / 10**(indice_medida1 - indice_medida2)
+
+        print(self.value_or_values)
+
+class MedidaArea(CheckErrors):
+    def __init__(self, value_or_values, measure_from, measure_to):
+        super().__init__(value_or_values, measure_from, measure_to)
+        self.cambio_medidas()
+
+    def cambio_medidas(self):
+        indice = 0
+        for i in self.longitud:
+            if self.measure_from == i:
+                indice_medida1 = indice
+            if self.measure_to == i:
+                indice_medida2 = indice
+            indice += 1
+        
+        if indice_medida1 < indice_medida2:
+            mode = 0
+        else:
+            mode = 1
+        
+        for i in range(len(self.value_or_values)):
+            if mode == 0:
+                self.value_or_values[i] = self.value_or_values[i] * 100**(indice_medida2 - indice_medida1)
+            else:
+                self.value_or_values[i] = self.value_or_values[i] / 100**(indice_medida1 - indice_medida2)
+
+        print(self.value_or_values)
+
+class MedidaVolumen(CheckErrors):
+    def __init__(self, value_or_values, measure_from, measure_to):
+        super().__init__(value_or_values, measure_from, measure_to)
+        self.cambio_medidas()
+
+    def cambio_medidas(self):
+        indice = 0
+        for i in self.longitud:
+            if self.measure_from == i:
+                indice_medida1 = indice
+            if self.measure_to == i:
+                indice_medida2 = indice
+            indice += 1
+        
+        if indice_medida1 < indice_medida2:
+            mode = 0
+        else:
+            mode = 1
+        
+        for i in range(len(self.value_or_values)):
+            if mode == 0:
+                self.value_or_values[i] = self.value_or_values[i] * 1000**(indice_medida2 - indice_medida1)
+            else:
+                self.value_or_values[i] = self.value_or_values[i] / 1000**(indice_medida1 - indice_medida2)
 
         print(self.value_or_values)
 
