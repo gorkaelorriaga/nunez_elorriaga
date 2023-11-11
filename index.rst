@@ -3,10 +3,10 @@
 Documentación del Módulo convertir.
 ==================================================
 
-.. automodule:: convertir
-   :members:
-   :undoc-members:
-   :show-inheritance:
+Bienvenido a la documentación del módudo connvertir, tu módulo de conversiones 
+
+.. module:: convertir
+
 
 Clase CheckErrors
 ==================
@@ -14,7 +14,6 @@ Clase CheckErrors
 .. autoclass:: CheckErrors
    :members:
    :special-members: __init__, check_is_number, check_input_type, check_measures
-   :show-inheritance:
 
    Esta clase se encarga de comprobar los problemas que puedan darse debido a los inputs del usuario.
 
