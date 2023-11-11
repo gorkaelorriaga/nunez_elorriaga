@@ -1,7 +1,7 @@
 .. index.rst
 
 Documentación del Módulo convertir.
-============================================
+==================================================
 
 .. automodule:: convertir
    :members:
@@ -9,7 +9,7 @@ Documentación del Módulo convertir.
    :show-inheritance:
 
 Clase CheckErrors
-================
+==================
 
 .. autoclass:: CheckErrors
    :members:
@@ -28,7 +28,7 @@ Clase CheckErrors
 
       Comprueba que el input de cantidad `value_or_values` es numérico o puede ser interpretado como tal. En caso de ser un iterable, comprueba que todos los elementos de este lo sean.
 
-   .. automethod:: check_input_type
+   .. automethod:: CheckErrors.check_input_type
       :noindex:
 
       Comprueba el tipo de variable que el input `value_or_values` es en Python.
@@ -39,7 +39,7 @@ Clase CheckErrors
       Comprueba la categoría de unidad (moneda/longitud/área/volúmen/líquido) que se ha introducido a los inputs de unidad `measure_from` y `measure_to`.
 
 Clase MedidaLongitud
-====================
+======================
 
 .. autoclass:: MedidaLongitud
    :members:
@@ -59,7 +59,7 @@ Clase MedidaLongitud
       Realiza la conversión de medidas.
 
 Clase MedidaArea
-================
+=================
 
 .. autoclass:: MedidaArea
    :members:
@@ -79,7 +79,7 @@ Clase MedidaArea
       Realiza la conversión de medidas.
 
 Clase MedidaVolumen
-==================
+====================
 
 .. autoclass:: MedidaVolumen
    :members:
@@ -99,7 +99,7 @@ Clase MedidaVolumen
       Realiza la conversión de medidas.
 
 Clase MedidasLiquidos
-=====================
+======================
 
 .. autoclass:: MedidasLiquidos
    :members:
@@ -117,3 +117,18 @@ Clase MedidasLiquidos
       :noindex:
 
       Realiza la conversión de medidas.
+
+Clase Conversor
+================
+
+.. autoclass:: Conversor
+   :members:
+   :special-members: __init__, 
+   :show-inheritance:
+
+   Esta clase se encarga de realizar las conversiones de cara al usuario.
+
+   .. automethod:: __init__
+      :noindex:
+
+      Inicializa la clase.
