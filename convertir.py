@@ -19,7 +19,6 @@ class CheckErrors:
         for elem in self.value_or_values: #Si es 1 solo lo hará para ese valor. #Si es Str todos sus elementos deben ser Nums para que el Str completo lo sea.
             float(elem)
         self.check_measures()
-        #return value_or_values
         
     def check_input_type(self)->int:
         if type(self.value_or_values)==str:
@@ -29,14 +28,14 @@ class CheckErrors:
         else:
             return 2
         
-    def check_measures(self):
-        print("Entro")
-        if self.measure_from in self.monedas and self.measure_to in self.monedas:
-            print("Es Monedas")
-        elif (self.measure_from in self.longitud and self.measure_to in self.longitud):
-            print("Es Longitud")
-        elif (self.measure_from in self.liquidos and self.measure_to in self.liquidos):
-            print("Es Liquido")
+    # def check_measures(self):
+    #     print("Entro")
+    #     if self.measure_from in self.monedas and self.measure_to in self.monedas:
+    #         print("Es Monedas")
+    #     elif (self.measure_from in self.longitud and self.measure_to in self.longitud):
+    #         print("Es Longitud")
+    #     elif (self.measure_from in self.liquidos and self.measure_to in self.liquidos):
+    #         print("Es Liquido")
 
 class MedidaLongitud(CheckErrors):
     def __init__(self, value_or_values, measure_from, measure_to):
@@ -154,7 +153,6 @@ class MedidaMonedas(CheckErrors):
         for i in range(len(self.value_or_values)):
             url='https://api.api-ninjas.com/v1/convertcurrency?have='+self.measure_from+'&want='+self.measure_to+'&amount='+str(self.value_or_values[i])
             response=requests.get(url,headers={'X-API-KEY':'xRIFC4JjW7IMhQpsVbYs4Q==IwpSgRDfoQ4zHbV1'})
-            #print(response.text)
             valor = ""
             inicio = 0
             elementos = ["e", ".", "+"]
@@ -274,18 +272,13 @@ class Conversor(MedidaLongitud, MedidasLiquidos, MedidaArea, MedidaVolumen, Medi
         self.check_measures()
     
     def check_measures(self):
-        #print("Entro")
         if self.measure_from in self.monedas and self.measure_to in self.monedas:
-            #print("Es Monedas")
             self.cambio_monedas()
         elif (self.measure_from in self.longitud and self.measure_to in self.longitud):
-            #print("Es Longitud")
             self.cambio_longitudes()
         elif (self.measure_from in self.liquidos and self.measure_to in self.liquidos):
-            #print("Es Liquido")
             self.cambio_liquidos()
         elif (self.measure_from in self.tiempo and self.measure_to in self.tiempo):
-            #print("Es Tiempo")
             self.cambio_tiempo()
         elif (self.measure_from in self.area and self.measure_to in self.area):
             self.cambio_areas()
