@@ -1,9 +1,9 @@
 .. index.rst
 
-Documentación del Módulo convertir.
+Documentación del módulo Convertir.
 ==================================================
 
-Bienvenido a la documentación del módudo convertir, tu módulo de conversiones para el día a día.
+Bienvenido a la documentación del módudo Convertir, tu módulo de conversiones para el día a día.
 
 .. module:: convertir
 
