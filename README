@@ -1,5 +1,4 @@
-El objetivo de este proyecto es desarrollar una librería para Python que aporte a sus usuarios, facilitando la conversión de distintos
-tipos de medidas. Estará enfocada sobre todo a datasets con objetivo de poder transformar variables entre unidades de medición.
+El objetivo de este proyecto es desarrollar una librería para Python que aporte a sus usuarios, facilitando la conversión de distintos tipos de medidas. Estará enfocada sobre todo a datasets con objetivo de poder transformar variables entre unidades de medición.
 
 Funcionalidades:
     - Herencias:
