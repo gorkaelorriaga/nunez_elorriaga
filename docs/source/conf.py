@@ -72,6 +72,7 @@ import sys
 
 # Añade la ruta al directorio de tus módulos
 sys.path.insert(0, os.path.abspath('.'))
+#sys.path.insert(0,os.path.abspath('../../Conversor/'))
 
 project = 'Conversor de unidades'
 copyright = '2023, Iker Núñez y Gorka Elorriaga'
