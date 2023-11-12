@@ -69,45 +69,55 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">value_or_values</span> <span class="o">=</span> <span class="n">value_or_values</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">measure_from</span> <span class="o">=</span> <span class="n">measure_from</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">measure_to</span> <span class="o">=</span> <span class="n">measure_to</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">monedas</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;EURO&quot;</span><span class="p">,</span> <span class="s2">&quot;DOLLAR&quot;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">monedas</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;EUR&quot;</span><span class="p">,</span> <span class="s2">&quot;USD&quot;</span><span class="p">,</span> <span class="s2">&quot;MXP&quot;</span><span class="p">,</span> <span class="s2">&quot;CNY&quot;</span><span class="p">,</span> <span class="s2">&quot;GBP&quot;</span><span class="p">,</span> <span class="s2">&quot;RUB&quot;</span><span class="p">,</span> <span class="s2">&quot;JPY&quot;</span><span class="p">,</span> <span class="s2">&quot;INR&quot;</span><span class="p">,</span> <span class="s2">&quot;CHF&quot;</span><span class="p">]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">longitud</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;KM&quot;</span><span class="p">,</span> <span class="s2">&quot;HM&quot;</span><span class="p">,</span> <span class="s2">&quot;DAM&quot;</span><span class="p">,</span> <span class="s2">&quot;M&quot;</span><span class="p">,</span> <span class="s2">&quot;DM&quot;</span><span class="p">,</span> <span class="s2">&quot;CM&quot;</span><span class="p">,</span> <span class="s2">&quot;MM&quot;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">liquidos</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;KL&quot;</span><span class="p">,</span> <span class="s2">&quot;HL&quot;</span><span class="p">,</span> <span class="s2">&quot;DAL&quot;</span><span class="p">,</span> <span class="s2">&quot;L&quot;</span><span class="p">,</span> <span class="s2">&quot;DL&quot;</span><span class="p">,</span> <span class="s2">&quot;CL&quot;</span><span class="p">,</span> <span class="s2">&quot;ML&quot;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tiempo</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;YEAR&quot;</span><span class="p">,</span> <span class="s2">&quot;MONTH&quot;</span><span class="p">,</span> <span class="s2">&quot;WEEK&quot;</span><span class="p">,</span> <span class="s2">&quot;DAY&quot;</span><span class="p">,</span> <span class="s2">&quot;HOUR&quot;</span><span class="p">,</span> <span class="s2">&quot;MINUTE&quot;</span><span class="p">,</span> <span class="s2">&quot;SECOND&quot;</span><span class="p">]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">area</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;HA&quot;</span><span class="p">,</span><span class="s2">&quot;KM2&quot;</span><span class="p">,</span><span class="s2">&quot;HM2&quot;</span><span class="p">,</span> <span class="s2">&quot;DAM2&quot;</span><span class="p">,</span> <span class="s2">&quot;M2&quot;</span><span class="p">,</span> <span class="s2">&quot;DM2&quot;</span><span class="p">,</span> <span class="s2">&quot;CM2&quot;</span><span class="p">,</span> <span class="s2">&quot;MM2&quot;</span><span class="p">]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">volumen</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;KM3&quot;</span><span class="p">,</span><span class="s2">&quot;HM3&quot;</span><span class="p">,</span> <span class="s2">&quot;DAM3&quot;</span><span class="p">,</span> <span class="s2">&quot;M3&quot;</span><span class="p">,</span> <span class="s2">&quot;DM3&quot;</span><span class="p">,</span> <span class="s2">&quot;CM3&quot;</span><span class="p">,</span> <span class="s2">&quot;MM3&quot;</span><span class="p">]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">liquidos</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;KL&quot;</span><span class="p">,</span> <span class="s2">&quot;HL&quot;</span><span class="p">,</span> <span class="s2">&quot;DAL&quot;</span><span class="p">,</span> <span class="s2">&quot;L&quot;</span><span class="p">,</span> <span class="s2">&quot;DL&quot;</span><span class="p">,</span> <span class="s2">&quot;CL&quot;</span><span class="p">,</span> <span class="s2">&quot;ML&quot;</span><span class="p">]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">medida</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">check_is_number</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="CheckErrors.check_is_number"><a class="viewcode-back" href="../index.html#convertir.CheckErrors.check_is_number">[docs]</a>    <span class="k">def</span> <span class="nf">check_is_number</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Comprueba si un valor o un iterable de valores es convertible a numérico.</span>
+<span class="sd">        </span>
+<span class="sd">        Params:</span>
+<span class="sd">            - value_or_values: valor/iterable.</span>
+<span class="sd">            </span>
+<span class="sd">        Devuelve:</span>
+<span class="sd">            - Inputs en una lista de manera que sean iterables.&#39;&#39;&#39;</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">check_input_type</span><span class="p">()</span> <span class="ow">or</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">check_input_type</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">value_or_values</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">value_or_values</span><span class="p">])</span><span class="o">==</span><span class="mi">1</span><span class="p">):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">value_or_values</span> <span class="o">=</span> <span class="p">[</span><span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value_or_values</span><span class="p">)]</span>
         <span class="k">for</span> <span class="n">elem</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">value_or_values</span><span class="p">:</span> <span class="c1">#Si es 1 solo lo hará para ese valor. #Si es Str todos sus elementos deben ser Nums para que el Str completo lo sea.</span>
-            <span class="nb">float</span><span class="p">(</span><span class="n">elem</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">check_measures</span><span class="p">()</span></div>
-        <span class="c1">#return value_or_values</span>
+            <span class="nb">float</span><span class="p">(</span><span class="n">elem</span><span class="p">)</span></div>
         
 <div class="viewcode-block" id="CheckErrors.check_input_type"><a class="viewcode-back" href="../index.html#convertir.CheckErrors.check_input_type">[docs]</a>    <span class="k">def</span> <span class="nf">check_input_type</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="o">-&gt;</span><span class="nb">int</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Comprueba el tipo de dato que es el input.</span>
+<span class="sd">        </span>
+<span class="sd">        Params:</span>
+<span class="sd">            - value_or_values: valor/iterable.</span>
+<span class="sd">            </span>
+<span class="sd">        Devuelve:</span>
+<span class="sd">            - 0 si es un str, 1 si es de tipo float y 2 si es de cualquier otro tipo.&#39;&#39;&#39;</span>
         <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value_or_values</span><span class="p">)</span><span class="o">==</span><span class="nb">str</span><span class="p">:</span>
             <span class="k">return</span> <span class="mi">0</span>
         <span class="k">elif</span> <span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value_or_values</span><span class="p">)</span><span class="o">==</span><span class="nb">int</span> <span class="ow">or</span> <span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value_or_values</span><span class="p">)</span><span class="o">==</span><span class="nb">float</span><span class="p">:</span>
             <span class="k">return</span> <span class="mi">1</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="mi">2</span></div>
-        
-<div class="viewcode-block" id="CheckErrors.check_measures"><a class="viewcode-back" href="../index.html#convertir.CheckErrors.check_measures">[docs]</a>    <span class="k">def</span> <span class="nf">check_measures</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Entro&quot;</span><span class="p">)</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">measure_from</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">monedas</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">measure_to</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">monedas</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Es Monedas&quot;</span><span class="p">)</span>
-        <span class="k">elif</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">measure_from</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">longitud</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">measure_to</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">longitud</span><span class="p">):</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Es Longitud&quot;</span><span class="p">)</span>
-        <span class="k">elif</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">measure_from</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">liquidos</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">measure_to</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">liquidos</span><span class="p">):</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Es Liquido&quot;</span><span class="p">)</span></div></div>
+            <span class="k">return</span> <span class="mi">2</span></div></div>
 
 <div class="viewcode-block" id="MedidaLongitud"><a class="viewcode-back" href="../index.html#convertir.MedidaLongitud">[docs]</a><span class="k">class</span> <span class="nc">MedidaLongitud</span><span class="p">(</span><span class="n">CheckErrors</span><span class="p">):</span>
 <div class="viewcode-block" id="MedidaLongitud.__init__"><a class="viewcode-back" href="../index.html#convertir.MedidaLongitud.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value_or_values</span><span class="p">,</span> <span class="n">measure_from</span><span class="p">,</span> <span class="n">measure_to</span><span class="p">):</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">value_or_values</span><span class="p">,</span> <span class="n">measure_from</span><span class="p">,</span> <span class="n">measure_to</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">cambio_medidas</span><span class="p">()</span></div>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">value_or_values</span><span class="p">,</span> <span class="n">measure_from</span><span class="p">,</span> <span class="n">measure_to</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="MedidaLongitud.cambio_medidas"><a class="viewcode-back" href="../index.html#convertir.MedidaLongitud.cambio_medidas">[docs]</a>    <span class="k">def</span> <span class="nf">cambio_medidas</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="MedidaLongitud.cambio_longitudes"><a class="viewcode-back" href="../index.html#convertir.MedidaLongitud.cambio_longitudes">[docs]</a>    <span class="k">def</span> <span class="nf">cambio_longitudes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Conversor para cambiar medidas de longitud.</span>
+<span class="sd">        </span>
+<span class="sd">        Params:</span>
+<span class="sd">            - Atributos de entrada a la clase.</span>
+<span class="sd">            </span>
+<span class="sd">        Devuelve:</span>
+<span class="sd">            - Variable value_or_values cambiando los valores de la medida de entrada a la medida de salida.&#39;&#39;&#39;</span>
         <span class="n">indice</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">longitud</span><span class="p">:</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">measure_from</span> <span class="o">==</span> <span class="n">i</span><span class="p">:</span>
@@ -125,18 +135,22 @@
             <span class="k">if</span> <span class="n">mode</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">value_or_values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">value_or_values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="n">indice_medida2</span> <span class="o">-</span> <span class="n">indice_medida1</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">value_or_values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">value_or_values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="n">indice_medida1</span> <span class="o">-</span> <span class="n">indice_medida2</span><span class="p">)</span>
-
-        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value_or_values</span><span class="p">)</span></div></div>
+                <span class="bp">self</span><span class="o">.</span><span class="n">value_or_values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">value_or_values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="n">indice_medida1</span> <span class="o">-</span> <span class="n">indice_medida2</span><span class="p">)</span></div></div>
 
 <div class="viewcode-block" id="MedidaArea"><a class="viewcode-back" href="../index.html#convertir.MedidaArea">[docs]</a><span class="k">class</span> <span class="nc">MedidaArea</span><span class="p">(</span><span class="n">CheckErrors</span><span class="p">):</span>
 <div class="viewcode-block" id="MedidaArea.__init__"><a class="viewcode-back" href="../index.html#convertir.MedidaArea.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value_or_values</span><span class="p">,</span> <span class="n">measure_from</span><span class="p">,</span> <span class="n">measure_to</span><span class="p">):</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">value_or_values</span><span class="p">,</span> <span class="n">measure_from</span><span class="p">,</span> <span class="n">measure_to</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">cambio_medidas</span><span class="p">()</span></div>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">value_or_values</span><span class="p">,</span> <span class="n">measure_from</span><span class="p">,</span> <span class="n">measure_to</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="MedidaArea.cambio_medidas"><a class="viewcode-back" href="../index.html#convertir.MedidaArea.cambio_medidas">[docs]</a>    <span class="k">def</span> <span class="nf">cambio_medidas</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="MedidaArea.cambio_areas"><a class="viewcode-back" href="../index.html#convertir.MedidaArea.cambio_areas">[docs]</a>    <span class="k">def</span> <span class="nf">cambio_areas</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Conversor para cambiar medidas de áreas.</span>
+<span class="sd">        </span>
+<span class="sd">        Params:</span>
+<span class="sd">            - Atributos de entrada a la clase.</span>
+<span class="sd">            </span>
+<span class="sd">        Devuelve:</span>
+<span class="sd">            - Variable value_or_values cambiando los valores de la medida de entrada a la medida de salida.&#39;&#39;&#39;</span>
         <span class="n">indice</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">longitud</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">area</span><span class="p">:</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">measure_from</span> <span class="o">==</span> <span class="n">i</span><span class="p">:</span>
                 <span class="n">indice_medida1</span> <span class="o">=</span> <span class="n">indice</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">measure_to</span> <span class="o">==</span> <span class="n">i</span><span class="p">:</span>
@@ -152,18 +166,22 @@
             <span class="k">if</span> <span class="n">mode</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">value_or_values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">value_or_values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="mi">100</span><span class="o">**</span><span class="p">(</span><span class="n">indice_medida2</span> <span class="o">-</span> <span class="n">indice_medida1</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">value_or_values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">value_or_values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="mi">100</span><span class="o">**</span><span class="p">(</span><span class="n">indice_medida1</span> <span class="o">-</span> <span class="n">indice_medida2</span><span class="p">)</span>
-
-        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value_or_values</span><span class="p">)</span></div></div>
+                <span class="bp">self</span><span class="o">.</span><span class="n">value_or_values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">value_or_values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="mi">100</span><span class="o">**</span><span class="p">(</span><span class="n">indice_medida1</span> <span class="o">-</span> <span class="n">indice_medida2</span><span class="p">)</span></div></div>
 
 <div class="viewcode-block" id="MedidaVolumen"><a class="viewcode-back" href="../index.html#convertir.MedidaVolumen">[docs]</a><span class="k">class</span> <span class="nc">MedidaVolumen</span><span class="p">(</span><span class="n">CheckErrors</span><span class="p">):</span>
 <div class="viewcode-block" id="MedidaVolumen.__init__"><a class="viewcode-back" href="../index.html#convertir.MedidaVolumen.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value_or_values</span><span class="p">,</span> <span class="n">measure_from</span><span class="p">,</span> <span class="n">measure_to</span><span class="p">):</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">value_or_values</span><span class="p">,</span> <span class="n">measure_from</span><span class="p">,</span> <span class="n">measure_to</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">cambio_medidas</span><span class="p">()</span></div>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">value_or_values</span><span class="p">,</span> <span class="n">measure_from</span><span class="p">,</span> <span class="n">measure_to</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="MedidaVolumen.cambio_medidas"><a class="viewcode-back" href="../index.html#convertir.MedidaVolumen.cambio_medidas">[docs]</a>    <span class="k">def</span> <span class="nf">cambio_medidas</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="MedidaVolumen.cambio_volumenes"><a class="viewcode-back" href="../index.html#convertir.MedidaVolumen.cambio_volumenes">[docs]</a>    <span class="k">def</span> <span class="nf">cambio_volumenes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Conversor para cambiar medidas de volumenes.</span>
+<span class="sd">        </span>
+<span class="sd">        Params:</span>
+<span class="sd">            - Atributos de entrada a la clase.</span>
+<span class="sd">            </span>
+<span class="sd">        Devuelve:</span>
+<span class="sd">            - Variable value_or_values cambiando los valores de la medida de entrada a la medida de salida.&#39;&#39;&#39;</span>
         <span class="n">indice</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">longitud</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">volumen</span><span class="p">:</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">measure_from</span> <span class="o">==</span> <span class="n">i</span><span class="p">:</span>
                 <span class="n">indice_medida1</span> <span class="o">=</span> <span class="n">indice</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">measure_to</span> <span class="o">==</span> <span class="n">i</span><span class="p">:</span>
@@ -179,16 +197,20 @@
             <span class="k">if</span> <span class="n">mode</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">value_or_values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">value_or_values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="mi">1000</span><span class="o">**</span><span class="p">(</span><span class="n">indice_medida2</span> <span class="o">-</span> <span class="n">indice_medida1</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">value_or_values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">value_or_values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="mi">1000</span><span class="o">**</span><span class="p">(</span><span class="n">indice_medida1</span> <span class="o">-</span> <span class="n">indice_medida2</span><span class="p">)</span>
-
-        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value_or_values</span><span class="p">)</span></div></div>
+                <span class="bp">self</span><span class="o">.</span><span class="n">value_or_values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">value_or_values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="mi">1000</span><span class="o">**</span><span class="p">(</span><span class="n">indice_medida1</span> <span class="o">-</span> <span class="n">indice_medida2</span><span class="p">)</span></div></div>
 
 <div class="viewcode-block" id="MedidasLiquidos"><a class="viewcode-back" href="../index.html#convertir.MedidasLiquidos">[docs]</a><span class="k">class</span> <span class="nc">MedidasLiquidos</span><span class="p">(</span><span class="n">CheckErrors</span><span class="p">):</span>
 <div class="viewcode-block" id="MedidasLiquidos.__init__"><a class="viewcode-back" href="../index.html#convertir.MedidasLiquidos.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value_or_values</span><span class="p">,</span> <span class="n">measure_from</span><span class="p">,</span> <span class="n">measure_to</span><span class="p">):</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">value_or_values</span><span class="p">,</span> <span class="n">measure_from</span><span class="p">,</span> <span class="n">measure_to</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">cambio_medidas</span><span class="p">()</span></div>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">value_or_values</span><span class="p">,</span> <span class="n">measure_from</span><span class="p">,</span> <span class="n">measure_to</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="MedidasLiquidos.cambio_medidas"><a class="viewcode-back" href="../index.html#convertir.MedidasLiquidos.cambio_medidas">[docs]</a>    <span class="k">def</span> <span class="nf">cambio_medidas</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="MedidasLiquidos.cambio_liquidos"><a class="viewcode-back" href="../index.html#convertir.MedidasLiquidos.cambio_liquidos">[docs]</a>    <span class="k">def</span> <span class="nf">cambio_liquidos</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Conversor para cambiar medidas de liquidos.</span>
+<span class="sd">        </span>
+<span class="sd">        Params:</span>
+<span class="sd">            - Atributos de entrada a la clase.</span>
+<span class="sd">            </span>
+<span class="sd">        Devuelve:</span>
+<span class="sd">            - Variable value_or_values cambiando los valores de la medida de entrada a la medida de salida.&#39;&#39;&#39;</span>
         <span class="n">indice</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">liquidos</span><span class="p">:</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">measure_from</span> <span class="o">==</span> <span class="n">i</span><span class="p">:</span>
@@ -206,15 +228,21 @@
             <span class="k">if</span> <span class="n">mode</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">value_or_values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">value_or_values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="n">indice_medida2</span> <span class="o">-</span> <span class="n">indice_medida1</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">value_or_values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">value_or_values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="n">indice_medida1</span> <span class="o">-</span> <span class="n">indice_medida2</span><span class="p">)</span>
-
-        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value_or_values</span><span class="p">)</span></div></div>
+                <span class="bp">self</span><span class="o">.</span><span class="n">value_or_values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">value_or_values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="n">indice_medida1</span> <span class="o">-</span> <span class="n">indice_medida2</span><span class="p">)</span></div></div>
 
 <span class="k">class</span> <span class="nc">MedidaMonedas</span><span class="p">(</span><span class="n">CheckErrors</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value_or_values</span><span class="p">,</span> <span class="n">measure_from</span><span class="p">,</span> <span class="n">measure_to</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">value_or_values</span><span class="p">,</span> <span class="n">measure_from</span><span class="p">,</span> <span class="n">measure_to</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">cambio_monedas</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Conversor para cambiar entre medidas monetarias.</span>
+<span class="sd">        </span>
+<span class="sd">        Params:</span>
+<span class="sd">            - Atributos de entrada a la clase.</span>
+<span class="sd">            </span>
+<span class="sd">        Devuelve:</span>
+<span class="sd">            - Variable value_or_values cambiando los valores de la medida de entrada a la medida de salida.&#39;&#39;&#39;</span>
+        <span class="kn">import</span> <span class="nn">requests</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value_or_values</span><span class="p">)):</span>
             <span class="n">url</span><span class="o">=</span><span class="s1">&#39;https://api.api-ninjas.com/v1/convertcurrency?have=&#39;</span><span class="o">+</span><span class="bp">self</span><span class="o">.</span><span class="n">measure_from</span><span class="o">+</span><span class="s1">&#39;&amp;want=&#39;</span><span class="o">+</span><span class="bp">self</span><span class="o">.</span><span class="n">measure_to</span><span class="o">+</span><span class="s1">&#39;&amp;amount=&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value_or_values</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
             <span class="n">response</span><span class="o">=</span><span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;X-API-KEY&#39;</span><span class="p">:</span><span class="s1">&#39;xRIFC4JjW7IMhQpsVbYs4Q==IwpSgRDfoQ4zHbV1&#39;</span><span class="p">})</span>
@@ -285,6 +313,13 @@
         <span class="k">return</span> <span class="p">(</span><span class="n">value</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">cambio_tiempo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Conversor para cambiar medidas de tiempo.</span>
+<span class="sd">        </span>
+<span class="sd">        Params:</span>
+<span class="sd">            - Atributos de entrada a la clase.</span>
+<span class="sd">            </span>
+<span class="sd">        Devuelve:</span>
+<span class="sd">            - Variable value_or_values cambiando los valores de la medida de entrada a la medida de salida.&#39;&#39;&#39;</span>
         <span class="n">indice</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">tiempo</span><span class="p">:</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">measure_from</span> <span class="o">==</span> <span class="n">i</span><span class="p">:</span>
@@ -337,19 +372,21 @@
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">value_or_values</span><span class="p">,</span> <span class="n">measure_from</span><span class="p">,</span> <span class="n">measure_to</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">check_measures</span><span class="p">()</span></div>
     
-    <span class="k">def</span> <span class="nf">check_measures</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1">#print(&quot;Entro&quot;)</span>
+<div class="viewcode-block" id="Conversor.check_measures"><a class="viewcode-back" href="../index.html#convertir.Conversor.check_measures">[docs]</a>    <span class="k">def</span> <span class="nf">check_measures</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Función que se encarga de ejecutar la función de cambio correcta en base a las medidas de cambio del input.</span>
+<span class="sd">        </span>
+<span class="sd">        Params:</span>
+<span class="sd">            - Atributos de entrada a la clase.</span>
+<span class="sd">            </span>
+<span class="sd">        Devuelve:</span>
+<span class="sd">            - Variable value_or_values con los valores actualizados.&#39;&#39;&#39;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">measure_from</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">monedas</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">measure_to</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">monedas</span><span class="p">:</span>
-            <span class="c1">#print(&quot;Es Monedas&quot;)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">cambio_monedas</span><span class="p">()</span>
         <span class="k">elif</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">measure_from</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">longitud</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">measure_to</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">longitud</span><span class="p">):</span>
-            <span class="c1">#print(&quot;Es Longitud&quot;)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">cambio_longitudes</span><span class="p">()</span>
         <span class="k">elif</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">measure_from</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">liquidos</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">measure_to</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">liquidos</span><span class="p">):</span>
-            <span class="c1">#print(&quot;Es Liquido&quot;)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">cambio_liquidos</span><span class="p">()</span>
         <span class="k">elif</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">measure_from</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">tiempo</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">measure_to</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">tiempo</span><span class="p">):</span>
-            <span class="c1">#print(&quot;Es Tiempo&quot;)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">cambio_tiempo</span><span class="p">()</span>
         <span class="k">elif</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">measure_from</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">area</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">measure_to</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">area</span><span class="p">):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">cambio_areas</span><span class="p">()</span>
@@ -357,7 +394,7 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">cambio_volumenes</span><span class="p">()</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="k">raise</span><span class="p">(</span><span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;La conversión que intenta realizar no es posible, compruebe que los valores son correctos y que ambas medidas pertenecen al mismo dominio</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">))</span>
-        <span class="k">return</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value_or_values</span><span class="p">)</span></div>
+        <span class="k">return</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value_or_values</span><span class="p">)</span></div></div>
 </pre></div>
 
            </div>

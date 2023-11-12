@@ -3,7 +3,7 @@
 Documentación del Módulo convertir.
 ==================================================
 
-Bienvenido a la documentación del módudo convertir, tu módulo de conversiones para el día a día.
+Bienvenido a la documentación del módudo connvertir, tu módulo de conversiones para el día a día.
 
 .. module:: convertir
 
@@ -13,8 +13,8 @@ Clase CheckErrors
 
 .. autoclass:: CheckErrors
    :members:
-   :special-members: __init__, check_is_number, check_input_type
-   :exclude-members: __init__, check_is_number, check_input_type
+   :special-members: __init__, check_is_number, check_input_type, check_measures
+   :exclude-members: __init__
 
    Esta clase se encarga de comprobar los problemas que puedan darse debido a los inputs del usuario.
 
@@ -38,14 +38,19 @@ Clase CheckErrors
 
    Comprueba el tipo de variable que el input `value_or_values` es en Python.
 
+   .. automethod:: check_measures
+      :noindex:
+
+   Comprueba la categoría de unidad (moneda/longitud/área/volúmen/líquido) que se ha introducido a los inputs de unidad `measure_from` y `measure_to`.
+
 Clase MedidaLongitud
 ======================
 
 .. autoclass:: MedidaLongitud
    :members:
-   :special-members: __init__, cambio_longitudes
+   :special-members: __init__, cambio_medidas
    :show-inheritance:
-   :exclude-members: __init__, cambio_longitudes
+   :exclude-members: __init__
 
    Esta clase se encarga de realizar las conversiones entre unidades de longitud.
 
@@ -59,7 +64,7 @@ Clase MedidaLongitud
       - measure_from (str): unidad original.
       - measure_to (str): unidad destino.
 
-   .. automethod:: cambio_longitudes
+   .. automethod:: cambio_medidas
       :noindex:
 
    Realiza la conversión de medidas.
@@ -69,9 +74,9 @@ Clase MedidaArea
 
 .. autoclass:: MedidaArea
    :members:
-   :special-members: __init__, cambio_areas
+   :special-members: __init__, cambio_medidas
    :show-inheritance:
-   :exclude-members: __init__, cambio_areas
+   :exclude-members: __init__
 
    Esta clase se encarga de realizar las conversiones entre unidades de área.
 
@@ -85,7 +90,7 @@ Clase MedidaArea
 
    Inicializa la clase.
 
-   .. automethod:: cambio_areas
+   .. automethod:: cambio_medidas
       :noindex:
 
    Realiza la conversión de medidas.
@@ -95,9 +100,9 @@ Clase MedidaVolumen
 
 .. autoclass:: MedidaVolumen
    :members:
-   :special-members: __init__, cambio_volumenes
+   :special-members: __init__, cambio_medidas
    :show-inheritance:
-   :exclude-members: __init__, cambio_volumenes
+   :exclude-members: __init__
 
    Esta clase se encarga de realizar las conversiones entre unidades de volumen.
 
@@ -112,7 +117,7 @@ Clase MedidaVolumen
       - measure_from (str): unidad original.
       - measure_to (str): unidad destino.
 
-   .. automethod:: cambio_volumenes
+   .. automethod:: cambio_medidas
       :noindex:
 
    Realiza la conversión de medidas.
@@ -122,9 +127,9 @@ Clase MedidasLiquidos
 
 .. autoclass:: MedidasLiquidos
    :members:
-   :special-members: __init__, cambio_liquidos
+   :special-members: __init__, cambio_medidas
    :show-inheritance:
-   :exclude-members: __init__, cambio_liquidos
+   :exclude-members: __init__
 
    Esta clase se encarga de realizar las conversiones entre unidades de líquidos.
 
@@ -138,77 +143,19 @@ Clase MedidasLiquidos
       - measure_from (str): unidad original.
       - measure_to (str): unidad destino.
 
-   .. automethod:: cambio_liquidos
+   .. automethod:: cambio_medidas
       :noindex:
 
    Realiza la conversión de medidas.
-
-
-Clase MedidaTiempo
-======================
-
-.. autoclass:: MedidaTiempo
-   :members:
-   :special-members: __init__, cambio_tiempo, year_month,month_week, week_day, day_hour, hour_minute, minute_second
-   :show-inheritance:
-   :exclude-members: __init__, cambio_tiempo, year_month,month_week, week_day, day_hour, hour_minute, minute_second
-
-   Esta clase se encarga de realizar las conversiones entre unidades de líquidos.
-
-   .. automethod:: __init__
-      :noindex:
-
-   Inicializa la clase.
-
-   Argumentos:
-      - value_or_values (numérico o iterable de numéricos): valor o valores a convertir.
-      - measure_from (str): unidad original.
-      - measure_to (str): unidad destino.
-
-   .. automethod:: year_month
-      :noindex:
-
-   Convierte años a meses.
-
-   .. automethod:: month_week
-      :noindex:
-
-   Convierte meses a semanas.
-
-   .. automethod:: week_day
-      :noindex:
-
-   Convierte semanas a días.
-
-   .. automethod:: day_hour
-      :noindex:
-   
-   Convierte días a horas.
-
-   .. automethod:: hour_minute
-      :noindex:
-
-   Convierte horas a minutos.
-
-   .. automethod:: minute_second
-      :noindex:
-
-   Convierte minutos a segundos.
-
-   .. automethod:: cambio_tiempo
-      :noindex:
-
-   Realiza la conversión de medidas.
-
 
 Clase Conversor
 ================
 
 .. autoclass:: Conversor
    :members:
-   :special-members: __init__, check_measures
+   :special-members: __init__, 
    :show-inheritance:
-   :exclude-members: __init__, check_measures
+   :exclude-members: __init__
 
    Esta clase se encarga de realizar las conversiones de cara al usuario.
 

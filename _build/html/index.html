@@ -44,6 +44,7 @@
 <li><a class="reference internal" href="#clase-medidaarea">Clase MedidaArea</a></li>
 <li><a class="reference internal" href="#clase-medidavolumen">Clase MedidaVolumen</a></li>
 <li><a class="reference internal" href="#clase-medidasliquidos">Clase MedidasLiquidos</a></li>
+<li><a class="reference internal" href="#clase-medidatiempo">Clase MedidaTiempo</a></li>
 <li><a class="reference internal" href="#clase-conversor">Clase Conversor</a></li>
 </ul>
 </div>
@@ -73,25 +74,346 @@
              
   <section id="documentacion-del-modulo-convertir">
 <h1>Documentación del Módulo convertir.<a class="headerlink" href="#documentacion-del-modulo-convertir" title="Permalink to this heading"></a></h1>
-<p>Bienvenido a la documentación del módudo connvertir, tu módulo de conversiones para el día a día.</p>
+<p>Bienvenido a la documentación del módudo convertir, tu módulo de conversiones para el día a día.</p>
 <span class="target" id="module-convertir"></span></section>
 <section id="clase-checkerrors">
 <h1>Clase CheckErrors<a class="headerlink" href="#clase-checkerrors" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="convertir.CheckErrors">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">convertir.</span></span><span class="sig-name descname"><span class="pre">CheckErrors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value_or_values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measure_from</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measure_to</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/convertir.html#CheckErrors"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#convertir.CheckErrors" title="Permalink to this definition"></a></dt>
+<dd><p>Esta clase se encarga de comprobar los problemas que puedan darse debido a los inputs del usuario.</p>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value_or_values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measure_from</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measure_to</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/convertir.html#CheckErrors.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd></dd></dl>
+
+<p>Inicializa la clase.</p>
+<dl class="simple">
+<dt>Argumentos:</dt><dd><ul class="simple">
+<li><p>value_or_values (numérico o iterable de numéricos): valor o valores a convertir.</p></li>
+<li><p>measure_from (str): unidad original.</p></li>
+<li><p>measure_to (str): unidad destino.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">check_is_number</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/convertir.html#CheckErrors.check_is_number"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>Comprueba si un valor o un iterable de valores es convertible a numérico.</p>
+<dl class="simple">
+<dt>Params:</dt><dd><ul class="simple">
+<li><p>value_or_values: valor/iterable.</p></li>
+</ul>
+</dd>
+<dt>Devuelve:</dt><dd><ul class="simple">
+<li><p>Inputs en una lista de manera que sean iterables.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Comprueba que el input de cantidad <cite>value_or_values</cite> es numérico o puede ser interpretado como tal. En caso de ser un iterable, comprueba que todos los elementos de este lo sean.</p>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">check_input_type</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="reference internal" href="_modules/convertir.html#CheckErrors.check_input_type"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>Comprueba el tipo de dato que es el input.</p>
+<dl class="simple">
+<dt>Params:</dt><dd><ul class="simple">
+<li><p>value_or_values: valor/iterable.</p></li>
+</ul>
+</dd>
+<dt>Devuelve:</dt><dd><ul class="simple">
+<li><p>0 si es un str, 1 si es de tipo float y 2 si es de cualquier otro tipo.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Comprueba el tipo de variable que el input <cite>value_or_values</cite> es en Python.</p>
+</dd></dl>
+
 </section>
 <section id="clase-medidalongitud">
 <h1>Clase MedidaLongitud<a class="headerlink" href="#clase-medidalongitud" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="convertir.MedidaLongitud">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">convertir.</span></span><span class="sig-name descname"><span class="pre">MedidaLongitud</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value_or_values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measure_from</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measure_to</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/convertir.html#MedidaLongitud"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#convertir.MedidaLongitud" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#convertir.CheckErrors" title="convertir.CheckErrors"><code class="xref py py-class docutils literal notranslate"><span class="pre">CheckErrors</span></code></a></p>
+<p>Esta clase se encarga de realizar las conversiones entre unidades de longitud.</p>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value_or_values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measure_from</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measure_to</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/convertir.html#MedidaLongitud.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd></dd></dl>
+
+<p>Inicializa la clase.</p>
+<dl class="simple">
+<dt>Argumentos:</dt><dd><ul class="simple">
+<li><p>value_or_values (numérico o iterable de numéricos): valor o valores a convertir.</p></li>
+<li><p>measure_from (str): unidad original.</p></li>
+<li><p>measure_to (str): unidad destino.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">cambio_longitudes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/convertir.html#MedidaLongitud.cambio_longitudes"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>Conversor para cambiar medidas de longitud.</p>
+<dl class="simple">
+<dt>Params:</dt><dd><ul class="simple">
+<li><p>Atributos de entrada a la clase.</p></li>
+</ul>
+</dd>
+<dt>Devuelve:</dt><dd><ul class="simple">
+<li><p>Variable value_or_values cambiando los valores de la medida de entrada a la medida de salida.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Realiza la conversión de medidas.</p>
+</dd></dl>
+
 </section>
 <section id="clase-medidaarea">
 <h1>Clase MedidaArea<a class="headerlink" href="#clase-medidaarea" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="convertir.MedidaArea">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">convertir.</span></span><span class="sig-name descname"><span class="pre">MedidaArea</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value_or_values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measure_from</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measure_to</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/convertir.html#MedidaArea"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#convertir.MedidaArea" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#convertir.CheckErrors" title="convertir.CheckErrors"><code class="xref py py-class docutils literal notranslate"><span class="pre">CheckErrors</span></code></a></p>
+<p>Esta clase se encarga de realizar las conversiones entre unidades de área.</p>
+<dl class="simple">
+<dt>Argumentos:</dt><dd><ul class="simple">
+<li><p>value_or_values (numérico o iterable de numéricos): valor o valores a convertir.</p></li>
+<li><p>measure_from (str): unidad original.</p></li>
+<li><p>measure_to (str): unidad destino.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value_or_values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measure_from</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measure_to</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/convertir.html#MedidaArea.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd></dd></dl>
+
+<p>Inicializa la clase.</p>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">cambio_areas</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/convertir.html#MedidaArea.cambio_areas"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>Conversor para cambiar medidas de áreas.</p>
+<dl class="simple">
+<dt>Params:</dt><dd><ul class="simple">
+<li><p>Atributos de entrada a la clase.</p></li>
+</ul>
+</dd>
+<dt>Devuelve:</dt><dd><ul class="simple">
+<li><p>Variable value_or_values cambiando los valores de la medida de entrada a la medida de salida.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Realiza la conversión de medidas.</p>
+</dd></dl>
+
 </section>
 <section id="clase-medidavolumen">
 <h1>Clase MedidaVolumen<a class="headerlink" href="#clase-medidavolumen" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="convertir.MedidaVolumen">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">convertir.</span></span><span class="sig-name descname"><span class="pre">MedidaVolumen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value_or_values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measure_from</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measure_to</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/convertir.html#MedidaVolumen"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#convertir.MedidaVolumen" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#convertir.CheckErrors" title="convertir.CheckErrors"><code class="xref py py-class docutils literal notranslate"><span class="pre">CheckErrors</span></code></a></p>
+<p>Esta clase se encarga de realizar las conversiones entre unidades de volumen.</p>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value_or_values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measure_from</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measure_to</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/convertir.html#MedidaVolumen.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd></dd></dl>
+
+<p>Inicializa la clase.</p>
+<dl class="simple">
+<dt>Argumentos:</dt><dd><ul class="simple">
+<li><p>value_or_values (numérico o iterable de numéricos): valor o valores a convertir.</p></li>
+<li><p>measure_from (str): unidad original.</p></li>
+<li><p>measure_to (str): unidad destino.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">cambio_volumenes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/convertir.html#MedidaVolumen.cambio_volumenes"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>Conversor para cambiar medidas de volumenes.</p>
+<dl class="simple">
+<dt>Params:</dt><dd><ul class="simple">
+<li><p>Atributos de entrada a la clase.</p></li>
+</ul>
+</dd>
+<dt>Devuelve:</dt><dd><ul class="simple">
+<li><p>Variable value_or_values cambiando los valores de la medida de entrada a la medida de salida.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Realiza la conversión de medidas.</p>
+</dd></dl>
+
 </section>
 <section id="clase-medidasliquidos">
 <h1>Clase MedidasLiquidos<a class="headerlink" href="#clase-medidasliquidos" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="convertir.MedidasLiquidos">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">convertir.</span></span><span class="sig-name descname"><span class="pre">MedidasLiquidos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value_or_values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measure_from</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measure_to</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/convertir.html#MedidasLiquidos"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#convertir.MedidasLiquidos" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#convertir.CheckErrors" title="convertir.CheckErrors"><code class="xref py py-class docutils literal notranslate"><span class="pre">CheckErrors</span></code></a></p>
+<p>Esta clase se encarga de realizar las conversiones entre unidades de líquidos.</p>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value_or_values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measure_from</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measure_to</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/convertir.html#MedidasLiquidos.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd></dd></dl>
+
+<p>Inicializa la clase.</p>
+<dl class="simple">
+<dt>Argumentos:</dt><dd><ul class="simple">
+<li><p>value_or_values (numérico o iterable de numéricos): valor o valores a convertir.</p></li>
+<li><p>measure_from (str): unidad original.</p></li>
+<li><p>measure_to (str): unidad destino.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">cambio_liquidos</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/convertir.html#MedidasLiquidos.cambio_liquidos"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>Conversor para cambiar medidas de liquidos.</p>
+<dl class="simple">
+<dt>Params:</dt><dd><ul class="simple">
+<li><p>Atributos de entrada a la clase.</p></li>
+</ul>
+</dd>
+<dt>Devuelve:</dt><dd><ul class="simple">
+<li><p>Variable value_or_values cambiando los valores de la medida de entrada a la medida de salida.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Realiza la conversión de medidas.</p>
+</dd></dl>
+
+</section>
+<section id="clase-medidatiempo">
+<h1>Clase MedidaTiempo<a class="headerlink" href="#clase-medidatiempo" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="convertir.MedidaTiempo">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">convertir.</span></span><span class="sig-name descname"><span class="pre">MedidaTiempo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value_or_values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measure_from</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measure_to</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/convertir.html#MedidaTiempo"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#convertir.MedidaTiempo" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#convertir.CheckErrors" title="convertir.CheckErrors"><code class="xref py py-class docutils literal notranslate"><span class="pre">CheckErrors</span></code></a></p>
+<p>Esta clase se encarga de realizar las conversiones entre unidades de líquidos.</p>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value_or_values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measure_from</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measure_to</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/convertir.html#MedidaTiempo.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd></dd></dl>
+
+<p>Inicializa la clase.</p>
+<dl class="simple">
+<dt>Argumentos:</dt><dd><ul class="simple">
+<li><p>value_or_values (numérico o iterable de numéricos): valor o valores a convertir.</p></li>
+<li><p>measure_from (str): unidad original.</p></li>
+<li><p>measure_to (str): unidad destino.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">year_month</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/convertir.html#MedidaTiempo.year_month"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd></dd></dl>
+
+<p>Convierte años a meses.</p>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">month_week</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/convertir.html#MedidaTiempo.month_week"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd></dd></dl>
+
+<p>Convierte meses a semanas.</p>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">week_day</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/convertir.html#MedidaTiempo.week_day"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd></dd></dl>
+
+<p>Convierte semanas a días.</p>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">day_hour</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/convertir.html#MedidaTiempo.day_hour"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd></dd></dl>
+
+<p>Convierte días a horas.</p>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">hour_minute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/convertir.html#MedidaTiempo.hour_minute"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd></dd></dl>
+
+<p>Convierte horas a minutos.</p>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">minute_second</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/convertir.html#MedidaTiempo.minute_second"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd></dd></dl>
+
+<p>Convierte minutos a segundos.</p>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">cambio_tiempo</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/convertir.html#MedidaTiempo.cambio_tiempo"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>Conversor para cambiar medidas de tiempo.</p>
+<dl class="simple">
+<dt>Params:</dt><dd><ul class="simple">
+<li><p>Atributos de entrada a la clase.</p></li>
+</ul>
+</dd>
+<dt>Devuelve:</dt><dd><ul class="simple">
+<li><p>Variable value_or_values cambiando los valores de la medida de entrada a la medida de salida.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Realiza la conversión de medidas.</p>
+</dd></dl>
+
 </section>
 <section id="clase-conversor">
 <h1>Clase Conversor<a class="headerlink" href="#clase-conversor" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="convertir.Conversor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">convertir.</span></span><span class="sig-name descname"><span class="pre">Conversor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value_or_values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measure_from</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measure_to</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/convertir.html#Conversor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#convertir.Conversor" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#convertir.MedidaLongitud" title="convertir.MedidaLongitud"><code class="xref py py-class docutils literal notranslate"><span class="pre">MedidaLongitud</span></code></a>, <a class="reference internal" href="#convertir.MedidasLiquidos" title="convertir.MedidasLiquidos"><code class="xref py py-class docutils literal notranslate"><span class="pre">MedidasLiquidos</span></code></a>, <a class="reference internal" href="#convertir.MedidaArea" title="convertir.MedidaArea"><code class="xref py py-class docutils literal notranslate"><span class="pre">MedidaArea</span></code></a>, <a class="reference internal" href="#convertir.MedidaVolumen" title="convertir.MedidaVolumen"><code class="xref py py-class docutils literal notranslate"><span class="pre">MedidaVolumen</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">MedidaMonedas</span></code>, <a class="reference internal" href="#convertir.MedidaTiempo" title="convertir.MedidaTiempo"><code class="xref py py-class docutils literal notranslate"><span class="pre">MedidaTiempo</span></code></a></p>
+<p>Esta clase se encarga de realizar las conversiones de cara al usuario.</p>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value_or_values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measure_from</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measure_to</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/convertir.html#Conversor.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd></dd></dl>
+
+<p>Inicializa la clase.</p>
+<dl class="simple">
+<dt>Argumentos:</dt><dd><ul class="simple">
+<li><p>value_or_values (numérico o iterable de numéricos): valor o valores a convertir.</p></li>
+<li><p>measure_from (str): unidad original.</p></li>
+<li><p>measure_to (str): unidad destino.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">check_measures</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/convertir.html#Conversor.check_measures"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>Función que se encarga de ejecutar la función de cambio correcta en base a las medidas de cambio del input.</p>
+<dl class="simple">
+<dt>Params:</dt><dd><ul class="simple">
+<li><p>Atributos de entrada a la clase.</p></li>
+</ul>
+</dd>
+<dt>Devuelve:</dt><dd><ul class="simple">
+<li><p>Variable value_or_values con los valores actualizados.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Controla qué conversión aplicar según las medidas provistas como parámetros.</p>
+</dd></dl>
+
 </section>
 
 
