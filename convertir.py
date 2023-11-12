@@ -1,3 +1,5 @@
+import requests
+
 class CheckErrors:
     def __init__(self, value_or_values, measure_from, measure_to):
         self.value_or_values = value_or_values
@@ -149,7 +151,6 @@ class MedidaMonedas(CheckErrors):
         super().__init__(value_or_values, measure_from, measure_to)
 
     def cambio_monedas(self):
-        import requests
         for i in range(len(self.value_or_values)):
             url='https://api.api-ninjas.com/v1/convertcurrency?have='+self.measure_from+'&want='+self.measure_to+'&amount='+str(self.value_or_values[i])
             response=requests.get(url,headers={'X-API-KEY':'xRIFC4JjW7IMhQpsVbYs4Q==IwpSgRDfoQ4zHbV1'})
