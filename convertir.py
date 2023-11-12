@@ -5,44 +5,57 @@ class CheckErrors:
         self.value_or_values = value_or_values
         self.measure_from = measure_from
         self.measure_to = measure_to
-        self.monedas = ["EURO", "DOLLAR"]
+        self.monedas = ["EUR", "USD", "MXP", "CNY", "GBP", "RUB", "JPY", "INR", "CHF"]
         self.longitud = ["KM", "HM", "DAM", "M", "DM", "CM", "MM"]
+        self.liquidos = ["KL", "HL", "DAL", "L", "DL", "CL", "ML"]
+        self.tiempo = ["YEAR", "MONTH", "WEEK", "DAY", "HOUR", "MINUTE", "SECOND"]
         self.area = ["HA","KM2","HM2", "DAM2", "M2", "DM2", "CM2", "MM2"]
         self.volumen = ["KM3","HM3", "DAM3", "M3", "DM3", "CM3", "MM3"]
-        self.liquidos = ["KL", "HL", "DAL", "L", "DL", "CL", "ML"]
         self.medida = None
         self.check_is_number()
 
     def check_is_number(self):
+        '''Comprueba si un valor o un iterable de valores es convertible a numérico.
+        
+        Params:
+            - value_or_values: valor/iterable.
+            
+        Devuelve:
+            - Inputs en una lista de manera que sean iterables.'''
         if not self.check_input_type() or (self.check_input_type() == 1 and self.value_or_values and len([self.value_or_values])==1):
             self.value_or_values = [float(self.value_or_values)]
         for elem in self.value_or_values: #Si es 1 solo lo hará para ese valor. #Si es Str todos sus elementos deben ser Nums para que el Str completo lo sea.
             float(elem)
-        self.check_measures()
         
     def check_input_type(self)->int:
+        '''Comprueba el tipo de dato que es el input.
+        
+        Params:
+            - value_or_values: valor/iterable.
+            
+        Devuelve:
+            - 0 si es un str, 1 si es de tipo float y 2 si es de cualquier otro tipo.'''
         if type(self.value_or_values)==str:
             return 0
         elif type(self.value_or_values)==int or type(self.value_or_values)==float:
             return 1
         else:
             return 2
-        
-    # def check_measures(self):
-    #     print("Entro")
-    #     if self.measure_from in self.monedas and self.measure_to in self.monedas:
-    #         print("Es Monedas")
-    #     elif (self.measure_from in self.longitud and self.measure_to in self.longitud):
-    #         print("Es Longitud")
-    #     elif (self.measure_from in self.liquidos and self.measure_to in self.liquidos):
-    #         print("Es Liquido")
+
+###
 
 class MedidaLongitud(CheckErrors):
     def __init__(self, value_or_values, measure_from, measure_to):
         super().__init__(value_or_values, measure_from, measure_to)
-        self.cambio_medidas()
 
-    def cambio_medidas(self):
+    def cambio_longitudes(self):
+        '''Conversor para cambiar medidas de longitud.
+        
+        Params:
+            - Atributos de entrada a la clase.
+            
+        Devuelve:
+            - Variable value_or_values cambiando los valores de la medida de entrada a la medida de salida.'''
         indice = 0
         for i in self.longitud:
             if self.measure_from == i:
@@ -62,16 +75,21 @@ class MedidaLongitud(CheckErrors):
             else:
                 self.value_or_values[i] = self.value_or_values[i] / 10**(indice_medida1 - indice_medida2)
 
-        print(self.value_or_values)
-
+###
 class MedidaArea(CheckErrors):
     def __init__(self, value_or_values, measure_from, measure_to):
         super().__init__(value_or_values, measure_from, measure_to)
-        self.cambio_medidas()
 
-    def cambio_medidas(self):
+    def cambio_areas(self):
+        '''Conversor para cambiar medidas de áreas.
+        
+        Params:
+            - Atributos de entrada a la clase.
+            
+        Devuelve:
+            - Variable value_or_values cambiando los valores de la medida de entrada a la medida de salida.'''
         indice = 0
-        for i in self.longitud:
+        for i in self.area:
             if self.measure_from == i:
                 indice_medida1 = indice
             if self.measure_to == i:
@@ -89,16 +107,20 @@ class MedidaArea(CheckErrors):
             else:
                 self.value_or_values[i] = self.value_or_values[i] / 100**(indice_medida1 - indice_medida2)
 
-        print(self.value_or_values)
-
 class MedidaVolumen(CheckErrors):
     def __init__(self, value_or_values, measure_from, measure_to):
         super().__init__(value_or_values, measure_from, measure_to)
-        self.cambio_medidas()
 
-    def cambio_medidas(self):
+    def cambio_volumenes(self):
+        '''Conversor para cambiar medidas de volumenes.
+        
+        Params:
+            - Atributos de entrada a la clase.
+            
+        Devuelve:
+            - Variable value_or_values cambiando los valores de la medida de entrada a la medida de salida.'''
         indice = 0
-        for i in self.longitud:
+        for i in self.volumen:
             if self.measure_from == i:
                 indice_medida1 = indice
             if self.measure_to == i:
@@ -116,14 +138,19 @@ class MedidaVolumen(CheckErrors):
             else:
                 self.value_or_values[i] = self.value_or_values[i] / 1000**(indice_medida1 - indice_medida2)
 
-        print(self.value_or_values)
 
 class MedidasLiquidos(CheckErrors):
     def __init__(self, value_or_values, measure_from, measure_to):
         super().__init__(value_or_values, measure_from, measure_to)
-        self.cambio_medidas()
 
-    def cambio_medidas(self):
+    def cambio_liquidos(self):
+        '''Conversor para cambiar medidas de liquidos.
+        
+        Params:
+            - Atributos de entrada a la clase.
+            
+        Devuelve:
+            - Variable value_or_values cambiando los valores de la medida de entrada a la medida de salida.'''
         indice = 0
         for i in self.liquidos:
             if self.measure_from == i:
@@ -143,16 +170,23 @@ class MedidasLiquidos(CheckErrors):
             else:
                 self.value_or_values[i] = self.value_or_values[i] / 10**(indice_medida1 - indice_medida2)
 
-        print(self.value_or_values)
-
 class MedidaMonedas(CheckErrors):
     def __init__(self, value_or_values, measure_from, measure_to):
         super().__init__(value_or_values, measure_from, measure_to)
 
     def cambio_monedas(self):
+        '''Conversor para cambiar entre medidas monetarias.
+        
+        Params:
+            - Atributos de entrada a la clase.
+            
+        Devuelve:
+            - Variable value_or_values cambiando los valores de la medida de entrada a la medida de salida.'''
+        import requests
         for i in range(len(self.value_or_values)):
             url='https://api.api-ninjas.com/v1/convertcurrency?have='+self.measure_from+'&want='+self.measure_to+'&amount='+str(self.value_or_values[i])
             response=requests.get(url,headers={'X-API-KEY':'xRIFC4JjW7IMhQpsVbYs4Q==IwpSgRDfoQ4zHbV1'})
+            #print(response.text)
             valor = ""
             inicio = 0
             elementos = ["e", ".", "+"]
@@ -219,6 +253,13 @@ class MedidaTiempo(CheckErrors):
         return (value)
 
     def cambio_tiempo(self):
+        '''Conversor para cambiar medidas de tiempo.
+        
+        Params:
+            - Atributos de entrada a la clase.
+            
+        Devuelve:
+            - Variable value_or_values cambiando los valores de la medida de entrada a la medida de salida.'''
         indice = 0
         for i in self.tiempo:
             if self.measure_from == i:
@@ -272,6 +313,13 @@ class Conversor(MedidaLongitud, MedidasLiquidos, MedidaArea, MedidaVolumen, Medi
         self.check_measures()
     
     def check_measures(self):
+        '''Función que se encarga de ejecutar la función de cambio correcta en base a las medidas de cambio del input.
+        
+        Params:
+            - Atributos de entrada a la clase.
+            
+        Devuelve:
+            - Variable value_or_values con los valores actualizados.'''
         if self.measure_from in self.monedas and self.measure_to in self.monedas:
             self.cambio_monedas()
         elif (self.measure_from in self.longitud and self.measure_to in self.longitud):
