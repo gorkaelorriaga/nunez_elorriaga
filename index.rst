@@ -23,6 +23,11 @@ Clase CheckErrors
 
    Inicializa la clase.
 
+   Argumentos:
+      - value_or_values (numérico o iterable de numéricos): valor o valores a convertir.
+      - measure_from (str): unidad original.
+      - measure_to (str): unidad destino.
+
    .. automethod:: check_is_number
       :noindex:
 
@@ -54,6 +59,11 @@ Clase MedidaLongitud
 
    Inicializa la clase.
 
+   Argumentos:
+      - value_or_values (numérico o iterable de numéricos): valor o valores a convertir.
+      - measure_from (str): unidad original.
+      - measure_to (str): unidad destino.
+
    .. automethod:: cambio_medidas
       :noindex:
 
@@ -69,6 +79,11 @@ Clase MedidaArea
    :exclude-members: __init__
 
    Esta clase se encarga de realizar las conversiones entre unidades de área.
+
+   Argumentos:
+      - value_or_values (numérico o iterable de numéricos): valor o valores a convertir.
+      - measure_from (str): unidad original.
+      - measure_to (str): unidad destino.
 
    .. automethod:: __init__
       :noindex:
@@ -91,10 +106,16 @@ Clase MedidaVolumen
 
    Esta clase se encarga de realizar las conversiones entre unidades de volumen.
 
+
    .. automethod:: __init__
       :noindex:
 
    Inicializa la clase.
+
+   Argumentos:
+      - value_or_values (numérico o iterable de numéricos): valor o valores a convertir.
+      - measure_from (str): unidad original.
+      - measure_to (str): unidad destino.
 
    .. automethod:: cambio_medidas
       :noindex:
@@ -117,6 +138,11 @@ Clase MedidasLiquidos
 
    Inicializa la clase.
 
+   Argumentos:
+      - value_or_values (numérico o iterable de numéricos): valor o valores a convertir.
+      - measure_from (str): unidad original.
+      - measure_to (str): unidad destino.
+
    .. automethod:: cambio_medidas
       :noindex:
 
@@ -137,6 +163,11 @@ Clase Conversor
       :noindex:
 
    Inicializa la clase.
+
+   Argumentos:
+      - value_or_values (numérico o iterable de numéricos): valor o valores a convertir.
+      - measure_from (str): unidad original.
+      - measure_to (str): unidad destino.
 
    .. automethod:: check_measures
       :noindex:
